@@ -1,0 +1,20 @@
+{
+    "HELLO":"hola",
+    "BYE":"adios",
+    "TAKE A PICTURE":"Fotografiar",
+    "CONTACTS": "Contactos",
+    "NOTES": "Notas",
+    "ADD": "Añadir" ,
+    "TITLE": "Título: ",
+    "DESCRIPTION": "Descripción: ",
+    "SEARCH": "Buscar: ",
+    "NEW": "Nueva",
+    "CONTACT": "Contacto",
+    "ALERT":"Alerta",
+    "ENTER": "Entrar",
+    "WELCOME": "Bienvenido a la Aplicación NoteA",
+    "MSN1": "Si no tienes cuenta, puedes",
+    "AQUI": "Aquí",
+    "REGISTER": "registrarte",
+    "MSN2": "O entra con:"
+}

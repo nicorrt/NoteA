@@ -7,16 +7,20 @@ import { Tab3Page } from './tab3.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab3PageRoutingModule } from './tab3-routing.module';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
+    TranslateModule,
     ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: Tab3Page }]),
     Tab3PageRoutingModule,
+   
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page],
+  providers:[ TranslateService]//En cada una de las paginas que se vayan a traducir con el servicio
 })
 export class Tab3PageModule {}

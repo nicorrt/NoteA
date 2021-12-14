@@ -1,17 +1,21 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab 3
+      {{'CONTACTS'|translate | titlecase}}
     </ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button fill="outline" color="danger" (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ ES <ion-toggle #mitoogle color="light" (ionChange)=cambiaIdioma($event)></ion-toggle> EN
+  <ion-button expand="block" (click)="hazFoto()">
+    <ion-icon name="camera" slot="end"></ion-icon>
+  </ion-button>
+  <ion-img *ngIf="this.image" [src]="this.image">
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  </ion-img>
 </ion-content>

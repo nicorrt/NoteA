@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Editar</ion-title>
+  </ion-toolbar>
+  <ion-button (click)="closeModal()" >
+    <ion-icon slot="end" name="close-circle"></ion-icon>
+  </ion-button>
+  <ion-button *ngIf="this.isAndroid" (click)="listen()" >
+    <ion-icon slot="end" name="mic-circle-outline"></ion-icon>
+  </ion-button>
+</ion-header>
+<ion-content>
+  <form [formGroup]="formNota" (ngSubmit)="editNote(note)">
+    <ion-item>
+      <ion-label>
+      </ion-label>
+      <ion-input type="text" formControlName="title" [(ngModel)]="this.note.title"></ion-input>
+    </ion-item>
+    <ion-textarea>
+      <ion-label>
+      </ion-label>
+      <ion-input formControlName="description" [(ngModel)]="this.note.description"></ion-input>
+    </ion-textarea>
+    <ion-button expand="full" color="primary" type="submit" [disabled]="!formNota.valid">Modificar</ion-button>
+</form>
+</ion-content>

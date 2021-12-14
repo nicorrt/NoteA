@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{'WELCOME'|translate | titlecase}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="logForm" (ngSubmit)="onSubmit()">
+        <ion-grid>
+          <ion-row color="primary" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+              <div text-center>
+                <h3>Login</h3>
+              </div>
+              <div padding>
+                <ion-item lines="full">
+                  <ion-label position="floating">Email</ion-label>
+                  <ion-input id="inputEmail" type="text" placeholder="ejemplo@email.com" formControlName="email" required ></ion-input>
+                </ion-item>
+                <ion-item lines="full">
+                  <ion-label position="floating">Password</ion-label>
+                  <ion-input id="inputPassword" type="password" placeholder="Contraseña" formControlName="password" required ></ion-input>
+                </ion-item>
+              </div>
+              <div padding>
+                <ion-button size="large" type="submit" [disabled]="!logForm.valid" expand="block">{{'ENTER'|translate | titlecase}}</ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <div text-center>
+              {{'MSN1'|translate | titlecase}} <a routerLink='/register'>
+                {{'REGISTER'|translate | titlecase}}</a> {{'AQUI'|translate | titlecase}}
+            </div>
+          </ion-row> 
+        </ion-grid>
+      </form>
+      <h3>{{'MSN2'|translate | titlecase}}</h3>
+      <ion-row>
+        <div padding text-center>
+          <ion-button lines="full" color="danger" type="submit" 
+          (click)="singinGoogle()" expand="block">Google</ion-button>
+        </div>     
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
